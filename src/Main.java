@@ -1,7 +1,16 @@
-public class Main {
+import javax.swing.*;
+import Exploration_game.Exploration_game;
 
-    public static void main(String[] args) {
-        System.out.println("Hello world");
-        System.out.println("Another change");
+public class Main {
+    public static void main(String[] args){
+        SwingUtilities.invokeLater(() -> {
+           JFrame frame = new JFrame ("Exploration frame");
+           frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+           frame.add(new Exploration_game());
+            frame.pack();
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
+        });
+
     }
 }
